@@ -11,38 +11,12 @@ Features
 🚪 Closes all open Safari tabs
 🛑 Terminates Safari after detecting a distraction
 🔍 Uses the website's primary purpose rather than simply matching a list of known domains
+
 How It Works
 The application continuously performs the following process:
-Safari History
-     │
-     ▼
-Read recent websites
-     │
-     ▼
-Take the latest 6 items (so the LLM isn't being overwhelmed)
-     │
-     ▼
-Send websites to AI classifier
-     │
-     ▼
-   ┌───────────────┐
-   │ Distraction?  │
-   └───────┬───────┘
-           │
-      ┌────┴────┐
-      │         │
-     YES        NO
-      │         │
-      ▼         ▼
-Clear Safari   Continue
-history        monitoring
-      │
-      ▼
-Close tabs
-      │
-      ▼
-Quit Safari
-The classifier gives only a yes or a no answer, and if the answer is no then it means that at least one of the websites in the list is regarded as distracting.
+Checks Safari History, Sends the last 6 history urls to LLM (6 so the LLM has some data to work with and so its not getting data dumped), If LLM reasons user is viewing a distracting website, responds with "no", terminates all safari tabs, clears history and quits the safari application. If LLM reasons the sites are not a distraction, it keeps monitoring.
+
+
 Project Structure
 .
 ├── Ai.py
@@ -99,6 +73,8 @@ Add a whitelist for allowed websites
 Add a user-configurable monitoring interval
 
 Support additional browsers
+
+Monitor private browsing
 
 Disclaimer
 The software is being offered for use in educational and personal productivity contexts. However, the author cannot be held responsible for any consequences such as lost browsing history, closed tabs, interrupted work, or other effects that may result from using the software.
