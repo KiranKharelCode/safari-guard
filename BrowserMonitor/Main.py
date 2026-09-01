@@ -8,7 +8,7 @@ from Ai import reasoning
 
 
 def get_table():
-    path = r"/Users/air/Library/Safari/History.db"
+    path = r"/Users/Your_Mac/Library/Safari/History.db"
     conn = sqlite3.connect(path)
     cursor = conn.cursor()
     cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
