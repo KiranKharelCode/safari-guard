@@ -3,14 +3,14 @@ A tool for macOS that uses AI to keep an eye on your activity when using Safari 
 The project involves the use of Groq to check websites that have recently been visited; when a distracting website is detected, the program automatically deletes the Safari history, closes all of the Safari tabs and terminates Safari.
 
 Features
-🤖 AI-powered website distraction detection
-🌐 Monitors Safari browsing history
-⏱️ Checks browsing activity every 10 seconds
-🧠 Uses an LLM to determine whether a website is distracting
-🧹 Automatically clears Safari history when a distraction is detected
-🚪 Closes all open Safari tabs
-🛑 Terminates Safari after detecting a distraction
-🔍 Uses the website's primary purpose rather than simply matching a list of known domains
+AI-powered website distraction detection
+Monitors Safari browsing history
+Checks browsing activity every 10 seconds
+Uses an LLM to determine whether a website is distracting
+Automatically clears Safari history when a distraction is detected
+Closes all open Safari tabs
+Terminates Safari after detecting a distraction
+Uses the website's primary purpose rather than simply matching a list of known domains
 
 How It Works
 The application continuously performs the following process:
